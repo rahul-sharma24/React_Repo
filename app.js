@@ -1,11 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-const heading=React.createElement("h1",{
-    id:"headding",
-    xyz:"abc"
-},"Hello World from React!!"); // {} it is for giving the attribute to the object. like id:"heading"
+// const heading=React.createElement("h1",{
+//     id:"headding",
+//     xyz:"abc"
+// },"Hello World from React!!"); // {} it is for giving the attribute to the object. like id:"heading"
 // heading is an object not the h1 yet
-const root=ReactDOM.createRoot(document.getElementById("root"));
+const newroot=(<h1>JSX element</h1>);
+ const root=ReactDOM.createRoot(document.getElementById("root"));
+
 
 /*
 let we want to something like this
@@ -30,4 +32,12 @@ const parent=React.createElement(
     ])
 )
 
-root.render(parent);// root.render converting the object into h1 and rendering it into root.
+const Comp1=()=>(
+    <h1>React Component</h1>
+)
+const Comp2=()=>(
+    <div>
+        <Comp1></Comp1>
+    </div>
+)
+root.render(<Comp2/>);// root.render converting the object into h1 and rendering it into root.

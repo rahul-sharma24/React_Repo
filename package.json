@@ -4,6 +4,9 @@
   "description": "This is Namste React by Rahul Sharma",
  
   "scripts": {
+
+    "start":"parcel index.html",
+    "build":"parcel build  index.html",
     "test": "jest"
   },
   "repository": {
